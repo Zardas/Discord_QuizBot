@@ -1,0 +1,13 @@
+{Question} Bla ? {Points} 4
+Le Cameroun | 0
+LU | 1
+Patrick Balkany | 0
+La réponse D | 0
+{Question} zefzad ? {Points} 5
+Arf | 0
+Jambon | 1
+Matrix | 1
+{Question} Nicephore ? {Points} 10
+Guys | 0
+Ferme | 1
+Idiot | 0
