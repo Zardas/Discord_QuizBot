@@ -14,8 +14,8 @@ module.exports = {
             this.question = question_[0];
             this.points = Number(question_[1]);
             
-            console.log("Question : " + this.question);
-            console.log("Points : " + this.points + " points");
+            //console.log("Question : " + this.question);
+            //console.log("Points : " + this.points + " points");
 
             //Mise en place des reponses
             this.reponses = [];

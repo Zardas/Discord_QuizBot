@@ -5,6 +5,7 @@ const client = new Discord.Client();
 const quizModule = require('./quizModule');
 
 var quiz;
+var currentQuestion;
 
 const listeAutorises = ["QuizMaster", "BZU"];
 
@@ -47,18 +48,24 @@ client.on('message', message => {
     } else if (message.content == '!participe') {
 
       quiz.ajoutParticipants(message.author);
-      console.log(quiz.participants);
-      message.channel.send(quiz.participants);
       
     } else if(message.content == '!next') {
+
       quiz.askNextQuestion(message.channel);
+
+    } else if(message.content == '!check') {
+
+      quiz.checkAnswer(currentQuestion);
+
     }
 
 
     // On ajoute les emoji de réponse au message venant d'être posé
-    if(message.author.tag == client.user.tag) {
-        quiz.ajoutEmojiReponse(message);
+    if(message.author.tag == client.user.tag && message.content.includes("Question ")) {
+        currentQuestion = quiz.ajoutEmojiReponse(message);
+        //console.log(currentQuestion);
     }
+
 
 
 });
